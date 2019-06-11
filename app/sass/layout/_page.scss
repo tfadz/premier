@@ -1,0 +1,175 @@
+//  MAIN
+
+// Typography
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wrapper {
+  // background: $premier-blue;
+}
+
+a {
+  color: $premier-green__dark;
+  text-decoration: none;
+}
+
+.premier-content {
+  background: #FFF;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+
+  &__main {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    padding: 25px 15px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .breadcrumb {
+    color: #999;
+    font-size: 13px;
+    margin: 10px 0 20px 0;
+  }
+
+  .img-margin {
+    margin: 15px 0;
+  }
+
+  .error {
+    flex-direction: column;
+    min-height: 400px;
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  h1 {
+    color: #111;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 24px;
+    padding: 0;
+  }
+
+  h2 {
+    color: #325863;
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 0 0 15px 0;
+    padding: 0;
+  }
+
+  h2 a {
+    color: #29809e;
+    text-decoration: none !important;
+  }
+
+  h3 {
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  p {
+    line-height: 1.4;
+    font-size: 15px;
+  }
+}
+
+// LEFT COLUMN
+
+#left {
+  padding: 0 30px 0 0;
+  max-width: 640px;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    overflow: hidden;
+    padding: 0 20px 30px 0;
+    width: auto;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+// RIGHT COLUMN
+
+#right {
+  color: #333;
+  max-width: 260px;
+  padding: 50px 0 0 15px;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    border: none;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  h3 {
+    color: $premier-green__dark;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}
+
+// Sidebar + Quotes
+.premier-sidebar {
+  position: relative;
+
+  &__testimonials {
+    border: 1px solid #47935E;
+    padding: 5px 0 0 20px;
+    border-width: 0 0 0 1px;
+
+    h3 {
+      margin-bottom: 15px;
+    }
+
+    .patient-quote {
+      color: #555;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 18px;
+      position: relative;
+      padding: 0 0 0 14px;
+
+      &:before {
+        content: '"';
+        font-size: 30px;
+        color: #7db38b;
+        font-weight: 400;
+        line-height: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__readmore {
+    font-size: 11px;
+    color: #666;
+    display: inline-block;
+    margin: 0 0 0 15px;
+    padding: 0 0 3px 0;
+    transition: .3s all;
+
+    &:hover {
+      border-bottom: 1px solid $premier-green__dark;
+    }
+  }
+}

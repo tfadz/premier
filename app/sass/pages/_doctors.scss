@@ -1,0 +1,41 @@
+.premier-doctors {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 600px) {
+    padding: 0 15px;
+  }
+
+  &__bio {
+    display: flex;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    align-self: flex-start;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    margin-left: 25px;
+
+    p {
+      margin-top: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin: 15px 0 0 0;
+    }
+
+    h2 {
+      color: $premier-blue;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+  }
+}

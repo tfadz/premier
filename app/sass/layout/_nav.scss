@@ -1,0 +1,163 @@
+.premier-nav {
+  align-items: center;
+  background: $premier-green__dark;
+
+  // background: #7c9f87;
+  // background-image: linear-gradient(#7c9f87 20%, #a2ceb0);
+  border: 1px solid $premier-green;
+  border-width: 0 0 1px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+
+  // Mobile
+
+  &__mobile-button {
+    color: #FFF;
+    display: none;
+    position: relative;
+    text-align: center;
+    z-index: 11;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      padding: 10px 0;
+    }
+  }
+
+  &__list {
+    color: #FFF;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      background: $premier-green__opacity;
+      flex-direction: column;
+      justify-content: flex-start;
+      top: 38px;
+      left: 0;
+      display: none;
+
+      // transform: translateY(-20em);
+      transition: all .5s ease-in-out;
+
+      &.open {
+        display: flex;
+
+        // transform: translateY(0);
+        position: absolute;
+        overflow: auto;
+        padding: 20px 0;
+      }
+    }
+  }
+
+  &__referral {
+    font-size: 14px;
+    color: #FFF;
+    display: inline-block;
+    line-height: 20px;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    width: 145px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    position: relative;
+
+    a {
+      color: #fff;
+      display: inline-block;
+      font-size: 15px;
+      padding: 13px 22px;
+      font-weight: 400;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: .4s all;
+
+      @media only screen and (max-width: 950px) {
+        padding: 14px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        padding: 15px 20px;
+      }
+
+      &:hover {
+        background: $premier-green;
+      }
+
+      &.current {
+        background: $premier-green;
+      }
+    }
+
+    &:after {
+      border-right: 1px solid $premier-green;
+      content: "";
+      display: inline-block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+    }
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  &__mobile-item {
+    display: none;
+     @media screen and (max-width: 768px) {
+      display: inline-block; 
+     }
+  }
+}
+
+.overlay {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    z-index: -1;
+    opacity: 0;
+    transition: .3s all;
+
+    &__show {
+      background: rgba(0, 0, 0, 0.75);
+      opacity: 1;
+      display: block;
+      height: 100%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 9;
+    }
+  }
+}

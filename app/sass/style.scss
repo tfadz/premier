@@ -1,0 +1,45 @@
+/* Scss Document */
+
+@import "site";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700");
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #111;
+}
+
+.signature {
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+#contact {
+  ul {
+    margin: 10px 0 10px 0;
+  }
+
+  li {
+    margin: 0 0 3px 0;
+  }
+}
+
+label {
+  font-size: 13px;
+  color: #555;
+  line-height: 25px;
+}
+
+.labeltxt {
+  color: #CC0000;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+}
