@@ -68,7 +68,7 @@ gulp.task('js', function () {
 // Create the default task that can be called using 'gulp'.
 // The task will process sass, run browser-sync and start watching for changes.
 gulp.task('default', ['sass', 'js', 'browser-sync'], function() {
-    gulp.watch("app/sass/*.scss", ['sass']);
+    gulp.watch("app/sass/**/*.scss", ['sass']);
     gulp.watch("app/js/theme/*.js", ['js']);
     
 })
